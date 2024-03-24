@@ -290,7 +290,7 @@ body {
       .container .text {
         position: absolute;
         top: 0%;
-        font-size: 2.6rem;
+        font-size: 3rem;
         font-family: "Bebas Neue";
         font-weight: bold;
         -webkit-text-stroke: 0.3px #000000;
@@ -301,17 +301,17 @@ body {
     .container .text-container, .container .shadow-container {
       position: relative;
       top: 5%;
-      left: 0%;
-      width: 5%;
+      left: 5%;
+      width: 7%;
       /* height: 10%; */
-      padding-top: 80px;
-        padding-left: 10px;
-        padding-left: 10px;
+      /* padding-top: 80px; */
+        /* padding-left: 10px; */
+        
       }
       .container {
         position: relative;
         padding-top: 80px;
-        padding-left: 20%;
+        padding-left: 25%;
         height: auto;
       } 
   
@@ -325,7 +325,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
-        width: 150px;
+        width: 200px;
         position: absolute;
         top: 150px;
         padding-left: 5% ;
