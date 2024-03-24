@@ -45,51 +45,7 @@ body {
     height: auto;
   }
 
-  @media only screen and (max-width: 680px) {
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 50px;
-      width: 400px;
-      position: absolute;
-      top: 1000px;
-      padding-left: 500px;
-    }
-    .container .text {
-      position: absolute;
-      top: 0%;
-      font-size: 5rem;
-      font-family: "Bebas Neue";
-      font-weight: bold;
-      -webkit-text-stroke: 1px #000000;
-      letter-spacing: 2px;
-      user-select: none;
-      pointer-events: none;
-  }
-  .container .text-container, .container .shadow-container {
-    position: relative;
-    top: 5%;
-    left: 30%;
-    width: 10%;
-    height: 10%;
-}
-.container {
-  position: relative;
-  padding-top: 79px;
-  padding-left: 150px;
-  height: auto;
-}
-
-    /* .container {
-      position: relative;
-      padding-top: 900px;
-      padding-left: 10px;
-      width: 50px;
-     
-       height: 0px; 
-     } */
-}
-
+ 
 
     
     .icons {
@@ -320,3 +276,52 @@ body {
     .support a:hover {
       color: rgba(200, 200, 200, 0.85);
     }
+
+    @media only screen and (max-width: 680px) {
+      .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+        width: 400px;
+        position: absolute;
+        top: 1000px;
+        padding-left: 500px;
+      }
+      .container .text {
+        position: absolute;
+        top: 0%;
+        font-size: 3rem;
+        font-family: "Bebas Neue";
+        font-weight: bold;
+        -webkit-text-stroke: 0.5px #000000;
+        letter-spacing: 2px;
+        user-select: none;
+        pointer-events: none;
+    }
+    .container .text-container, .container .shadow-container {
+      position: relative;
+      top: 5%;
+      left: 0%;
+      width: 10%;
+      height: 10%;
+      }
+      .container {
+        position: relative;
+        padding-top: 80px;
+        padding-left: 110px;
+        height: auto;
+      } */
+  
+       .container {
+        position: relative;
+        padding-top: 900px;
+        padding-left: 10px;
+        width: 50px;
+       
+         height: 0px; 
+       }
+       #nav-bar{
+        display: none;
+       }
+      }
+  
