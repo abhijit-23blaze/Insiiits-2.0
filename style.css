@@ -13,17 +13,6 @@ html, body {
   margin: 0;
   background: var(--background);
 }
-/* .image-grid {
-  display: grid;
-  grid-template-columns: 10% 20px 10%;
-  grid-gap: 10px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: auto;
-} */
-
 
 #nav-toggle:checked ~ #nav-header {
   width: calc(var(--navbar-width-min) - 16px);

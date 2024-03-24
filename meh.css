@@ -1,6 +1,6 @@
 body {
     background-color: rgb(0, 0, 0);
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   /* canvas{                              
       position:absolute;
@@ -8,17 +8,7 @@ body {
       left:0;
   } */
 
-  @media only screen and (max-width: 680px) {
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 50px;
-      width: 400px;
-      position: absolute;
-      top: 1000px;
-      padding-left: 500px;
-    }
-}
+  
   .container {
     display: flex;
     justify-content: space-between;
@@ -54,6 +44,18 @@ body {
     width: 100%;
     height: auto;
   }
+
+  @media only screen and (max-width: 680px) {
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+      width: 400px;
+      position: absolute;
+      top: 1000px;
+      padding-left: 500px;
+    }
+}
     
     .icons {
       display: none;
