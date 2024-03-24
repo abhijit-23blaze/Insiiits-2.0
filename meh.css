@@ -290,11 +290,11 @@ body {
       .container .text {
         position: absolute;
         top: 0%;
-        font-size: 3rem;
+        font-size: 2.6rem;
         font-family: "Bebas Neue";
         font-weight: bold;
-        -webkit-text-stroke: 0.5px #000000;
-        letter-spacing: 2px;
+        -webkit-text-stroke: 0.3px #000000;
+        letter-spacing: 1px;
         user-select: none;
         pointer-events: none;
     }
@@ -302,26 +302,42 @@ body {
       position: relative;
       top: 5%;
       left: 0%;
-      width: 10%;
-      height: 10%;
+      width: 5%;
+      /* height: 10%; */
+      padding-top: 80px;
+        padding-left: 10px;
+        padding-left: 10px;
       }
       .container {
         position: relative;
         padding-top: 80px;
-        padding-left: 110px;
+        padding-left: 20%;
         height: auto;
-      } */
+      } 
   
-       .container {
-        position: relative;
-        padding-top: 900px;
-        padding-left: 10px;
-        width: 50px;
        
-         height: 0px; 
-       }
+
+
        #nav-bar{
         display: none;
        }
+       .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        width: 150px;
+        position: absolute;
+        top: 150px;
+        padding-left: 5% ;
+        }
+        /* .image-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 50px;
+          width: 400px;
+          position: absolute;
+          top: 100px;
+          padding-left: 5%;
+        } */
       }
   
