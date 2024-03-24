@@ -55,6 +55,39 @@ body {
       top: 1000px;
       padding-left: 500px;
     }
+    .container .text {
+      position: absolute;
+      top: 0%;
+      font-size: 5rem;
+      font-family: "Bebas Neue";
+      font-weight: bold;
+      -webkit-text-stroke: 1px #000000;
+      letter-spacing: 2px;
+      user-select: none;
+      pointer-events: none;
+  }
+  .container .text-container, .container .shadow-container {
+    position: relative;
+    top: 5%;
+    left: 30%;
+    width: 10%;
+    height: 10%;
+}
+.container {
+  position: relative;
+  padding-top: 79px;
+  padding-left: 150px;
+  height: auto;
+}
+
+    /* .container {
+      position: relative;
+      padding-top: 900px;
+      padding-left: 10px;
+      width: 50px;
+     
+       height: 0px; 
+     } */
 }
 
 
