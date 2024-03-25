@@ -11,6 +11,7 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="meh.css">
+  <link rel="stylesheet" href="hem.css">
 
 </head>
 <body>
@@ -36,7 +37,19 @@
     
   </div>
   <div class="image-grid">
+    <!-- <a href="issue1/index.html"></a>
     <img src="1.jpg" alt="Image 1" width="100px">
+    </a>
+    <a href="issue1/index.html"></a>
+    <img src="1.jpg" alt="Image 1" width="100px">
+    </a>
+    <a href="issue1/index.html"></a>
+    <img src="1.jpg" alt="Image 1" width="100px">
+    </a>
+    <a href="issue1/index.html"></a>
+    <img src="1.jpg" alt="Image 1" width="100px">
+    </a> -->
+    <img src="1.jpg" alt="Image 1" width="100px" onclick="redirectTo('issue1/index.html')" >
     <img src="1.jpg" alt="Image 1" width="100px">
     <img src="1.jpg" alt="Image 1" width="100px">
     <img src="1.jpg" alt="Image 1" width="100px">
@@ -68,16 +81,25 @@
   </div>
  
 </div>
+
 <!-- partial -->
 
 
 
   <script type="text/javascript">
+
+    function redirectTo(url) {
+        window.location.href = url;
+    }
+
     const textArr = document.querySelectorAll('.text')
     const colorArr = ["#fefefe", "#ff9b00", "#ff3434", "#db38f0", "#0096fb", "#00c500", "#ffd200"]
     textArr.forEach((text, index) => {
       text.style.color = colorArr[index]
     })
+
+
+   
 
   </script>
   
