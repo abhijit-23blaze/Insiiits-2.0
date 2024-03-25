@@ -6,56 +6,22 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 <title>InsIIITs</title>
-<meta name="viewport" content="width = 1050, user-scalable = no" />
+<meta name="viewport" content="width = 500, user-scalable = no" />
 <script type="text/javascript" src="files/extras/jquery.min.1.7.js"></script>
 <script type="text/javascript" src="files/extras/modernizr.2.5.3.min.js"></script>
 <script type="text/javascript" src="files/lib/hash.js"></script>
-<style>
-	.topnav {
-  background-color: #333;
-  overflow: hidden;
-  height: 70px;
-}
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 25px 30px;
-  text-decoration: none;
-  font-size: 20px;
-}
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #cc5aca;
-  color: black;
-}
+	
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  padding: 0px 0px;
-  background-color: #333;
-  color: white;
-  padding-left: 10px;
-  padding-right: 30px;
-}
-</style>
+
 
 </head>
 <body>
 	
 <div id="canvas">
 
-<div class="zoom-icon zoom-icon-in"></div>
-
-<div class="topnav">
-	<a class="active" href="#home"><img src="collegelogo_white.png" width="69px"></a>
-	<a href="verison1.html">November'23 Edition</a>
-	<a href="version2.html">December'23 Edition</a>
-	<a href="">About</a>
-  </div>
+<!-- <div class="zoom-icon zoom-icon-in"></div> -->
 
 <div class="magazine-viewport">
 	<div class="container">
@@ -101,9 +67,19 @@
 				<img src="files/pages/11-thumb.jpg" width="76" height="100" class="page-11">
 				<span>10-11</span>
 			</li>
+			<!-- <li class="d">
+				<img src="files/pages/10-thumb.jpg" width="76" height="100" class="page-10">
+				<img src="files/pages/11-thumb.jpg" width="76" height="100" class="page-11">
+				<span>12-13</span>
+			</li>
+			<li class="d">
+				<img src="files/pages/10-thumb.jpg" width="76" height="100" class="page-10">
+				<img src="files/pages/11-thumb.jpg" width="76" height="100" class="page-11">
+				<span>14-15</span>
+			</li> -->
 			<li class="i">
 				<img src="files/pages/12-thumb.jpg" width="76" height="100" class="page-12">
-				<span>12</span>
+				<span>16</span>
 			</li>
 		<ul>
 	<div>	
@@ -118,102 +94,210 @@ function loadApp() {
 
  	var flipbook = $('.magazine');
 
+
  	// Check if the CSS was already loaded
 	
 	if (flipbook.width()==0 || flipbook.height()==0) {
 		setTimeout(loadApp, 10);
 		return;
 	}
-	
+
+
+	if (screen.width < 600) {
+		
 	// Create the flipbook
 
 	flipbook.turn({
-			
-			// Magazine width
+				
+				// Magazine width
 
-			width: 922,
+				width: 400,
 
-			// Magazine height
+				// Magazine height
 
-			height: 600,
+				height: 500,
 
-			// Duration in millisecond
+				// Duration in millisecond
 
-			duration: 1000,
+				duration: 1000,
 
-			// Hardware acceleration
+				// Hardware acceleration
 
-			acceleration: !isChrome(),
+				acceleration: !isChrome(),
 
-			// Enables gradients
+				// Enables gradients
 
-			gradients: true,
-			
-			// Auto center this flipbook
+				gradients: true,
+				
+				// Auto center this flipbook
 
-			autoCenter: true,
+				autoCenter: true,
 
-			// Elevation from the edge of the flipbook when turning a page
+				display : 'single',
 
-			elevation: 50,
+				// Elevation from the edge of the flipbook when turning a page
 
-			// The number of pages
+				elevation: 50,
 
-			pages: 26,
+				// The number of pages
 
-			// Events
+				pages: 26,
 
-			when: {
-				turning: function(event, page, view) {
-					
-					var book = $(this),
-					currentPage = book.turn('page'),
-					pages = book.turn('pages');
-			
-					// Update the current URI
+				// Events
+				
 
-					Hash.go('files/page/' + page).update();
+				when: {
+					turning: function(event, page, view) {
+						
+						var book = $(this),
+						currentPage = book.turn('page'),
+						pages = book.turn('pages');
+				
+						// Update the current URI
 
-					// Show and hide navigation buttons
+						Hash.go('files/page/' + page).update();
 
-					disableControls(page);
-					
+						// Show and hide navigation buttons
 
-					$('.thumbnails .page-'+currentPage).
-						parent().
-						removeClass('current');
+						disableControls(page);
+						
 
-					$('.thumbnails .page-'+page).
-						parent().
-						addClass('current');
+						$('.thumbnails .page-'+currentPage).
+							parent().
+							removeClass('current');
+
+						$('.thumbnails .page-'+page).
+							parent().
+							addClass('current');
 
 
 
-				},
+					},
 
-				turned: function(event, page, view) {
+					turned: function(event, page, view) {
 
-					disableControls(page);
+						disableControls(page);
 
-					$(this).turn('center');
+						$(this).turn('center');
 
-					if (page==1) { 
-						$(this).turn('peel', 'br');
+						if (page==1) { 
+							$(this).turn('peel', 'br');
+						}
+
+					},
+
+					missing: function (event, pages) {
+
+						// Add pages that aren't in the magazine
+
+						for (var i = 0; i < pages.length; i++)
+							addPage(pages[i], $(this));
+
 					}
-
-				},
-
-				missing: function (event, pages) {
-
-					// Add pages that aren't in the magazine
-
-					for (var i = 0; i < pages.length; i++)
-						addPage(pages[i], $(this));
-
 				}
-			}
+			
 
-	});
+				
+
+		});
+    	
+	}else {
+	// Create the flipbook
+
+		flipbook.turn({
+				
+				// Magazine width
+
+				width: 922,
+
+				// Magazine height
+
+				height: 600,
+
+				// Duration in millisecond
+
+				duration: 1000,
+
+				// Hardware acceleration
+
+				acceleration: !isChrome(),
+
+				// Enables gradients
+
+				gradients: true,
+				
+				// Auto center this flipbook
+
+				autoCenter: true,
+
+				// display : 'single',
+
+				// Elevation from the edge of the flipbook when turning a page
+
+				elevation: 50,
+
+				// The number of pages
+
+				pages: 26,
+
+				// Events
+				
+
+				when: {
+					turning: function(event, page, view) {
+						
+						var book = $(this),
+						currentPage = book.turn('page'),
+						pages = book.turn('pages');
+				
+						// Update the current URI
+
+						Hash.go('files/page/' + page).update();
+
+						// Show and hide navigation buttons
+
+						disableControls(page);
+						
+
+						$('.thumbnails .page-'+currentPage).
+							parent().
+							removeClass('current');
+
+						$('.thumbnails .page-'+page).
+							parent().
+							addClass('current');
+
+
+
+					},
+
+					turned: function(event, page, view) {
+
+						disableControls(page);
+
+						$(this).turn('center');
+
+						if (page==1) { 
+							$(this).turn('peel', 'br');
+						}
+
+					},
+
+					missing: function (event, pages) {
+
+						// Add pages that aren't in the magazine
+
+						for (var i = 0; i < pages.length; i++)
+							addPage(pages[i], $(this));
+
+					}
+				}
+			
+
+				
+
+		});
+	}
 
 	// Zoom.js
 
@@ -496,9 +580,9 @@ function loadApp() {
 
 yepnope({
 	test : Modernizr.csstransforms,
-	yep: ['files//lib/turn.js'],
-	nope: ['files//lib/turn.html4.min.js'],
-	both: ['files//lib/zoom.min.js', 'files/js/magazine.js', 'files/css/magazine.css'],
+	yep: ['files/lib/turn.js'],
+	nope: ['files/lib/turn.html4.min.js'],
+	both: ['files/lib/zoom.min.js', 'files/js/magazine.js', 'files/css/magazine.css'],
 	complete: loadApp
 });
 

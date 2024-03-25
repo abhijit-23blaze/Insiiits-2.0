@@ -72,6 +72,9 @@ var has3d,
     // Display
 
     display: 'double',
+    
+
+    
 
     // Duration of transition in milliseconds
 
@@ -94,6 +97,9 @@ var has3d,
     when: null
   },
 
+  
+
+  
   flipOptions = {
 
     // Size of the active zone of each corner
@@ -122,6 +128,8 @@ turnMethods = {
 
     var i, that = this, pageNum = 0, data = this.data(), ch = this.children();
 
+    
+
     // Set initial configuration
 
     options = $.extend({
@@ -130,6 +138,15 @@ turnMethods = {
       direction: this.attr('dir') || this.css('direction') || 'ltr'
     }, turnOptions, options);
 
+    var isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    // If viewport matches mobile media query, set display option to 'single'
+    if (isMobile) {
+      options.display = 'single';
+    }
+
+
+    
     data.opts = options;
     data.pageObjs = {};
     data.pages = {};

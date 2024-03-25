@@ -3,7 +3,8 @@ body{
 	/* background-color:#ffffff; */
 	margin:0;
 	padding:0;
-	background-image: url("iiitsbg3.jpg");
+	/* background-image: url("iiitsbg3.jpg"); */
+	background-color: black;
 	background-size:cover;
 }
 /* .sidebar {
@@ -394,4 +395,12 @@ body{
 	left:0;
 	bottom:0;
 	width:100%;
+}
+
+@media only screen and (max-width: 680px) {
+
+	.thumbnails{
+		display: none;
+	}
+
 }
