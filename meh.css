@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(0, 0, 0);
+    background-image: url("DSC_6048.JPG") ;
+    background-size: cover;
     /* overflow: hidden; */
   }
   /* canvas{                              
