@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>InsIIITS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- <script src="https://unpkg.com/swup@4"></script>
+  <script defer>
+    const swup = new Swup();
+  </script> -->
+
+  
+
+</head>
+<body>
+    <section class='wrapper'>
+        <div class='hero'>
+        </div>
+        <div class='content'>
+          <h1 class='h1--scalingSize' data-text='InsIIITS'>InsIIITS</h1>
+          <h2>The best newsletter(website) to ever exist!!!</h2>
+          <!-- <input type='checkbox' id='switch'>
+          <label for='switch'><span><span class='icon'>→</span> switch bg</span></label> -->
+        </div>
+      </section>
+  
+<!-- partial:index.partial.html -->
+<div id="nav-bar">
+  <input id="nav-toggle" type="checkbox" checked/>
+  <div id="nav-header"><a id="nav-title" href="https://codepen.io" target="_blank">InsIIITs</a>
+    <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+    <hr/>
+  </div>
+  <div id="nav-content">
+    <div class="nav-button"><a href="/issue1/index.html" ><i class="fas fa-home"></i><span>Home</span></a></div>
+    <div class="nav-button"><a href="/issue1/index.html" ><i class="fas fa-fire"></i><span>About Us</span></a></div>
+    
+    <hr/>
+    <div class="nav-button"><a href="/issue1/index.html" ><i class="fas fa-book-open"></i><span>Edition 1</span></a></div>
+    <div class="nav-button"><a href="/issue1/index.html" ><i class="fas fa-book-open"></i><span>Edition 2</span></a></div>
+    <div class="nav-button"><a href="/issue1/index.html" ><i class="fas fa-book-open"></i><span>Edition 3</span></a></div>
+    <div class="nav-button"><a href="/issue1/index.html" ><i class="fas fa-book-open"></i><span>Edition 4</span></a></div>
+    <hr/>
+    <div class="nav-button"><a href="/issue1/index.html" ><i class="fas fa-gem"></i><span>IIIT Sri City</span></a></div>
+    <div id="nav-content-highlight"></div>
+  </div>
+ 
+</div>
+
+<!-- partial -->
+
+
+
+  <script type="text/javascript">
+
+    function redirectTo(url) {
+        window.location.href = url;
+    }
+
+    const textArr = document.querySelectorAll('.text')
+    const colorArr = ["#fefefe", "#ff9b00", "#ff3434", "#db38f0", "#0096fb", "#00c500", "#ffd200"]
+    textArr.forEach((text, index) => {
+      text.style.color = colorArr[index]
+    })
+
+
+   
+
+  </script>
+  
+</body>
+</html>
