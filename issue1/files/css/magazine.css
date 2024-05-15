@@ -408,7 +408,7 @@ body{
 		position:absolute;
 		top:40%;
 		left:54%;
-		width:922px;
+		width:440px;
 		height:600px;
 		margin:auto;
 	}
@@ -421,7 +421,7 @@ body{
 	}
 	
 	.magazine-viewport .page{
-		width:600px;
+		width:440px;
 		height:600px;
 		background-color:white;
 		background-repeat:no-repeat;
