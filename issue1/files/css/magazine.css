@@ -403,4 +403,29 @@ body{
 		display: none;
 	}
 
+	.magazine-viewport .container{
+	
+		position:absolute;
+		top:40%;
+		left:54%;
+		width:922px;
+		height:600px;
+		margin:auto;
+	}
+	
+	.magazine-viewport .magazine{
+		width:440px;
+		height:600px;
+		left:-461px;
+		top:-300px;
+	}
+	
+	.magazine-viewport .page{
+		width:600px;
+		height:600px;
+		background-color:white;
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+	}
+
 }
