@@ -360,14 +360,34 @@ label[for=nav-footer-toggle] {
 @media only screen and (max-width: 680px) {
       
   
-
-   
-  #nav-bar{
-    display: none;
+  :root {
+    --background: #000000;
+      --navbar-width: 220px;
+      --navbar-width-min: 40px;
+      --navbar-dark-primary: #5eead467;
+      --navbar-dark-secondary: #60a5fa;
+      --navbar-light-primary: #000000;
+      --navbar-light-secondary: #000000;
+  }
+  
+  .nav-button {
+    position: relative;
+    margin-left: 2px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    color: var(--navbar-light-secondary);
+    direction: ltr;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.2s;
   }
 
+  .nav-button1 {
+    margin-left: 10px;
+  }
   
-  
+ 
    
     
   }

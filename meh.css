@@ -288,42 +288,43 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
-        width: 200px;
+        width: 250px;
         position: absolute;
-        top: 150px;
+        top: 170px;
         padding-left: 17% ;
         }
 
       .container .text {
         position: absolute;
-        top: 0%;
+        top: 0px;
         font-size: 4rem;
         font-family: "Bebas Neue";
         font-weight: bold;
-        -webkit-text-stroke: 0.3px #000000;
+        -webkit-text-stroke: 1px #000000;
         letter-spacing: 1px;
         user-select: none;
         pointer-events: none;
     }
     .container .text-container, .container .shadow-container {
-      position: relative;
-      top: 5%;
-      left: 10%;
-      width: 7%;
+      position: absolute;
+      top: 70px;
+      left: 0px;
+      height:100px ;
+      /* width: 7%; */
       
         
       }
       .container {
-        position: relative;
-        padding-top: 80px;
-        padding-left: 35%;
+        position: absolute;
+        padding-top: 50px;
+        padding-left: 0px;
         height: auto;
       } 
   
        
-      #nav-bar{
+      /* #nav-bar{
         display: none;
-      }
+      } */
 
       
       /* Add any additional styling for smaller screens here */
