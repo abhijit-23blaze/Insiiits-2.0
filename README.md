@@ -67,7 +67,7 @@ If you have any questions or feedback, feel free to reach out:
 
 - **Abhijit Patil**
 - **Email:** abhijiiitpatil@gmail.com
-- **GitHub:** [yourusername](https://github.com/abhijit-23blaze)
+- **GitHub:** [abhijit-23blaze](https://github.com/abhijit-23blaze)
 
 Thank you for visiting the **InsIIITS** magazine website repository!
 
