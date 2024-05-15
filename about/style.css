@@ -774,7 +774,27 @@
       top: 10px;
       filter: invert(8);
     }
-     
+
+    .description h3 {
+      margin: 0;
+      font-size: 1.3rem;
+  
+      color: #000;
+  
+      
+    }
+    
+    .description p {
+      margin: 0;
+      font-size: .7rem;
+    }
+  
+    .description a {
+      text-decoration: none;
+      margin: 3px;
+      font-size: .7rem;
+      color: #00d78f67;
+    }
       
     }
   
